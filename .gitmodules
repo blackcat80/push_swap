@@ -1,4 +1,3 @@
 [submodule "libft"]
 	path = libft
-	url = git@github.com:blackcat80/libft.git
-
+	url = https://github.com/blackcat80/libft.git
