@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 19:28:32 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/02/01 19:55:26 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/02/01 22:13:28 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ stack_a *stack_ini()
 	stack_a *s = NULL;
 
 	s = (stack_a *)malloc(sizeof(stack_a));
-	if (s == NULL) return NULL;
+	if (s == NULL)
+		return (NULL);
 
 	s ->items = NULL;
 	s ->num_items = 0;
+	return (s);
 }
 
 void push(stack_a *s, int value)
@@ -34,13 +36,13 @@ void push(stack_a *s, int value)
 	s-> items = (int *)realloc(s->items, (s->num_items + 1)*sizeof(int));
 	if (s == NULL) 
 	{
-		return;
+		return ;
 	}
 	s ->items[s->num_items] = value;
 	s ->num_items++;
 }
 
-void pop(stack_a)
+int pop(stack_a *s)
 {
 	if (s->num_items == 0) 
 	{
@@ -56,7 +58,7 @@ void pop(stack_a)
 		free(s->items);
 		s->items = NULL;
 	}
-	return last;
+	return (last);
 }
 
 void stack_destroy(stack_a *s)

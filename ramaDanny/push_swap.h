@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.h                                            :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 19:22:20 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/02/01 22:14:27 by dacortes         ###   ########.fr       */
+/*   Created: 2023/02/01 18:30:19 by dacortes          #+#    #+#             */
+/*   Updated: 2023/02/01 18:38:29 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
-#include <stdlib.h>
-#include <stdio.h>
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-typedef struct _stack stack_a;
+# include"../libft/libft.h"
 
-stack_a *stack_ini();
-void push(stack_a *s, int value);
-int pop(stack_a *s);
-void stack_destroy(stack_a *s);
-void stack_print(stack_a *s);
+typedef struct s_stack
+{
+	size_t			index;
+	int				num;
+	struct s_stack	*next;
+}t_stack;
 
 #endif
