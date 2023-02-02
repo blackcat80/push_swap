@@ -1,28 +1,39 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/02 18:13:05 by dacortes          #+#    #+#             */
+/*   Updated: 2023/02/02 18:13:57 by dacortes         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t	add_at_end(t_stack **stack, t_stack *new_item)
+#include"../libft/libft.h"
+
+void	*ft_realloc(void *ptr, size_t size)
 {
-	t_stack	*tmp;
+	void	*new_ptr;
 
-	if (!new_item)
-		return (0);
-	tmp = *stack;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new_item;
-	return (1);
+    if (!ptr) 
+		return malloc(size);
+    if (!size) 
+	{
+		free(ptr);
+        return (NULL);
+    }
+    new_ptr = malloc(size);
+    ft_memcpy(new_ptr, ptr, size);
+    free(ptr);
+    return (new_ptr);
 }
 
-
-size_t	add_at_end(t_stack **stack, t_stack *new_item)
+void	push(stack_a *s, int value)
 {
-	t_stack	*tmp;
-
-	if (!new_item)
-		return (0);
-	tmp = *stack;
-	if (ft_lstlast(tmp) == 0)
-		return (0);
-	tmp->next = new_item;
-	return (1);
+	s-> items = (int *)ft_realloc(s->items, (s->num_items + 1)*sizeof(int));
+	if (s == NULL)
+		return ;
+	s ->items[s->num_items] = value;
+	s ->num_items++;
 }
