@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 18:13:05 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/02 18:13:57 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/02/03 21:09:58 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,23 @@ void	push(stack_a *s, int value)
 	s ->items[s->num_items] = value;
 	s ->num_items++;
 }
+
+/*
+void *realloc(void *ptr, size_t size) {
+  if (ptr == NULL) {
+    return malloc(size);
+  }
+  if (size == 0) {
+    free(ptr);
+    return NULL;
+  }
+  void *new_ptr = malloc(size);
+  if (new_ptr == NULL) {
+    return NULL;
+  }
+  size_t old_size = malloc_size(ptr);
+  size_t copy_size = (old_size < size) ? old_size : size;
+  memcpy(new_ptr, ptr, copy_size);
+  free(ptr);
+  return new_ptr;
+}*/
