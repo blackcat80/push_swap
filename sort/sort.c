@@ -1,5 +1,5 @@
 
-#include "sort.h"
+#include "./push_swap.h"
 
 void	ft_sort_three(t_stack *stack_a, int *sort)
 {
