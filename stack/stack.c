@@ -1,5 +1,5 @@
 
-#include "stack.h"
+#include "./push_swap.h"
 
 void	ft_connect(t_node *first, t_node *second)
 {
