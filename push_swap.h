@@ -1,7 +1,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include"../libft/libft.h"
+# include"./libft/libft.h"
 
 # define SWAP_A			"sa\n"
 # define SWAP_B			"sb\n"
