@@ -77,11 +77,10 @@ t_node	*ft_stack_pop(t_stack *stack);
 void	ft_stack_push(t_stack *stack, t_node *node);
 void	ft_connect(t_node *first, t_node *second);
 
-static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value)
-static int	ft_change_direction(t_node *top, int group, int reverse)
+static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value);
+static int	ft_change_direction(t_node *top, int group, int reverse);
 
 
 
 #endif
 
-#endif
