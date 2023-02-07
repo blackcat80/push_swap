@@ -44,7 +44,7 @@ void	ft_can_swap(t_stack *stack_a, t_stack *stack_b)
 	if (sa && sb)
 		ft_double_swap(stack_a, stack_b);
 	if (!sa && sb)
-		ft_swap_b(stack_b);
+		ft_swap(stack_b, SWAP_B);
 }
 
 static void	ft_split_stack(t_stack *stack_a, t_stack *stack_b, t_pivot pivot)
@@ -58,11 +58,11 @@ static void	ft_split_stack(t_stack *stack_a, t_stack *stack_b, t_pivot pivot)
 		if (stack_a->top->element < pivot.value)
 		{
 			stack_a->top->group = pivot.index;
-			ft_push_b(stack_a, stack_b);
+			ft_push(stack_a, stack_b, PUSH_B);
 			qtd--;
 		}
 		else
-			ft_rotate_a(stack_a);
+			ft_rotate(stack_a, ROTATE_A);
 	}
 }
 

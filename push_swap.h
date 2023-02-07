@@ -92,8 +92,8 @@ void	ft_sort_three(t_stack *stack_a, int *sort);
 
 //sort_all.c
 void	ft_sort_all(t_stack *stack_a, t_stack *stack_b, int *sort, int first);
-static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value);
-static int	ft_change_direction(t_node *top, int group, int reverse);
+//static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value);
+//static int	ft_change_direction(t_node *top, int group, int reverse);
 
 //return_stack_b.c
 void	ft_return_stack(t_stack *stack_a,t_stack *stack_b,t_pivot pivot, int *sort);

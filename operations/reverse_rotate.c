@@ -12,7 +12,7 @@ static void	ft_reverse_rotate_op(t_stack *stack)
 */
 void	ft_rev_rotate(t_stack *stack, char *option)
 {
-	ft_revere_rotate_op(stack);
+	ft_reverse_rotate_op(stack);
 	ft_printf("%s",option);
 }
 /*

@@ -45,14 +45,14 @@ BG_Black				=\033[40m
 # ========================== MAKE RULES ===================================== #
 
 all: $(NAME)
-	@echo "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== ✅$(DEF_COLOR)$(BG_Black)\n"
+	@echo -e "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== ✅$(DEF_COLOR)$(BG_Black)\n"
 	@touch $(NAME)
 
 $(NAME):$(OBJ_SRC)
-	@$(MAKE) bonus -C $(LIBFT_DIR)
 	@$(CC) $(CFLAGS) $(OBJ_SRC) -L$(LIBFT_DIR)$(LIBFT) $(INCLUDE)$(LIBFT_DIR) -o $@
 
 $(OBJ_DIR)/%.o: %.c $(HEADER)
+	@make bonus -C  $(LIBFT_DIR)
 	@mkdir -p $(dir $@)
 	@printf "$(YELLOW)\r $@$(DEF_COLOR)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
@@ -62,14 +62,14 @@ $(OBJ_DIR)/%.o: %.c $(HEADER)
 .PHONY: all clean fclean re
 
 clean:
-	@$(MAKE) clean -C $(LIBFT_DIR)
+	@$make clean -C ./libft/
 	@$(RM) $(OBJ_DIR)
-	@echo "\n$(CYAN)==== push_swap and libft object files cleaned! ==== ✅$(DEF_COLOR)\n"
+	@echo -e "\n$(CYAN)==== push_swap and libft object files cleaned! ==== ✅$(DEF_COLOR)\n"
 	
 fclean: clean 
-	@$(MAKE) fclean -C $(LIBFT_DIR)
+	@$make fclean -C ./libft/
 	@$(RM) $(NAME)
-	@echo "\n$(CYAN)==== push_swap libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
+	@echo -e "\n$(CYAN)==== push_swap libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
 
 re : fclean all
-	@echo "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap and libft! ==== ✅$(DEF_COLOR)\n"
+	@echo -e "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap and libft! ==== ✅$(DEF_COLOR)\n"
