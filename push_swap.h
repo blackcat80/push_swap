@@ -61,6 +61,7 @@ void	ft_error_exit(void);
 //void	ft_swap_b(t_stack *stack_b);
 void	ft_swap(t_stack *stack, char *option);
 void	ft_double_swap(t_stack *stack_a, t_stack *stack_b);
+
 //FUNCION MODIFICADA POR DANNY
 //void	ft_push_a(t_stack *stack_a, t_stack *stack_b);
 //void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
