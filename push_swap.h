@@ -48,12 +48,16 @@ t_node	*ft_stack_pop(t_stack *stack);
 void	ft_stack_push(t_stack *stack, t_node *node);
 void	ft_connect(t_node *first, t_node *second);
 
+//parse.c dir parse
 void	ft_parse(int argc, char **argv, t_list **reverse_input, int **sort);
-void	ft_add_number_sorting(t_list *new, t_list **list);
+//sort_input.c dir parse
 void	ft_list_to_array(t_list	**list, int **sort);
-void	ft_free_char_2pointer(char **pointer);
+void	ft_add_number_sorting(t_list *new, t_list **list);
+//free_resorces.c
 void	ft_free_list(t_list **lst);
+void	ft_free_char_2pointer(char **pointer);
 void	ft_free_null(void *pointer);
+
 void	ft_error_exit(void);
 
 //FUNCION MODIFICADA POR DANNY

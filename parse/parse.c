@@ -15,7 +15,7 @@
 /*
 **	Función que comprueba si una cadena de caracteres es un número.
 */
-int	ft_is_string_number(char *string)
+static int	ft_is_string_number(char *string)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ int	ft_is_string_number(char *string)
 /*
 **	Función que comprueba si un número es un entero.
 */
-int	ft_is_integer(long number)
+static int	ft_is_integer(long number)
 {
 	if (number > INT_MAX)
 		return (0);
@@ -43,7 +43,7 @@ int	ft_is_integer(long number)
 **	Función que comprueba si una cadena de caracteres es un número y lo
 **	almacena en un entero.
 */
-int	ft_parse_number(char *str_number, int *number)
+static int	ft_parse_number(char *str_number, int *number)
 {
 	long	lnumber;
 
@@ -56,7 +56,7 @@ int	ft_parse_number(char *str_number, int *number)
 /*
 ** Función que parsea los argumentos de entrada y los almacena en una lista
 */
-void	ft_parse_input(char **input, t_list **reverse_input, int **sort)
+static void	ft_parse_input(char **input, t_list **reverse_input, int **sort)
 {
 	int		*number;
 	t_list	*sorted_list;

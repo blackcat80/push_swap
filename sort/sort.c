@@ -33,7 +33,7 @@ de manera que el elemento más grande quede en la parte inferior de la pila.*/
 static void	ft_sort_two(t_stack *stack_a)
 {
 	if (stack_a->size == 2)
-		ft_swap_a(stack_a);
+		ft_swap(stack_a, SWAP_A);
 }
 
 /* La función "ft_sort" se utiliza para ordenar los elementos de una pila stack_a.  
