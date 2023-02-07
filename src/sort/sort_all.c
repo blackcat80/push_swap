@@ -34,7 +34,7 @@ static int	ft_can_swap_b(t_stack *stack_b)
 	return (0);
 }
 
-void	ft_can_swap(t_stack *stack_a, t_stack *stack_b)
+static void	ft_can_swap(t_stack *stack_a, t_stack *stack_b)
 {
 	int	sa;
 	int	sb;

@@ -52,7 +52,7 @@ BG_Black				=\033[40m
 # ========================== MAKE RULES ===================================== #
 
 all: $(NAME)
-	@echo -e "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== ✅$(DEF_COLOR)$(BG_Black)\n"
+	@echo "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== ✅$(DEF_COLOR)$(BG_Black)\n"
 	@touch $(NAME)
 
 $(NAME):$(OBJ_SRC)
@@ -75,12 +75,12 @@ $(OBJ_DIR)/%.o: %.c $(HEADER)
 clean:
 	@make clean -C $(LIBFT_DIR)
 	@$(RM) $(OBJ_DIR)
-	@echo -e "\n$(CYAN)==== push_swap and libft object files cleaned! ==== ✅$(DEF_COLOR)\n"
+	@echo "\n$(CYAN)==== push_swap and libft object files cleaned! ==== ✅$(DEF_COLOR)\n"
 	
 fclean: clean 
 	@make fclean -C $(LIBFT_DIR)
 	@$(RM) $(NAME)
-	@echo -e "\n$(CYAN)==== push_swap and libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
+	@echo "\n$(CYAN)==== push_swap and libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
 
 re : fclean all
-	@echo -e "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap and libft! ==== ✅$(DEF_COLOR)\n"
+	@echo "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap and libft! ==== ✅$(DEF_COLOR)\n"

@@ -45,11 +45,11 @@ static int	ft_is_integer(long number)
 */
 static int	ft_parse_number(char *str_number, int *number)
 {
-	long	lnumber;
+	int	lnumber;
 
 	if (!ft_is_string_number(str_number))
-		return (FALSE);
-	lnumber = atol(str_number);
+		return (0);
+	lnumber = ft_atoi(str_number);
 	*number = (int)lnumber;
 	return (ft_is_integer(lnumber));
 }
