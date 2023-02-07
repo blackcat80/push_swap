@@ -73,7 +73,6 @@ t_node	*ft_stack_pop(t_stack *stack);
 t_node	*ft_new_stack_node(int element);
 void	ft_stack_push(t_stack *stack, t_node *node);
 
-
 //free_resorces.c
 void	ft_free_list(t_list **lst);
 void	ft_free_char_2pointer(char **pointer);
