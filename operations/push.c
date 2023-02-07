@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 16:14:10 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/04 16:14:10 by dacortes         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include"./push_swap.h"
 /*
 	**Función que extrae el primer elemento de la pila stack_pop y lo inserta en 
@@ -28,8 +16,8 @@ void	ft_pop_push(t_stack *stack_pop, t_stack *stack_push)
 	**Función general que permite mover un elemento de una pila a otra.
 	eje: ft_push(stack_a, stack_b, PUSH_A) o ft_push(stack_b, stack_a, PUSH_B).
 */
-void ft_push(t_stack *stack1, t_stack *stack2, char *option)
+void ft_push(t_stack *stack_a, t_stack *stack_b, char *option)
 {
-	ft_pop_push(stack1, stack2);
+	ft_pop_push(stack_a, stack_b);
 	ft_printf("%s", option);
 }

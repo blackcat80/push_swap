@@ -1,21 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 17:17:00 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/04 17:17:00 by dacortes         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include"./push_swap.h"
 
 /*
 	**Función que intercambia el primer y segundo elemento de la pila.
 */
-void	ft_swap(t_stack *stack)
+void	ft_swap_(t_stack *stack)
 {
 	t_node	*first;
 	t_node	*second;
@@ -44,7 +32,7 @@ void	ft_swap(t_stack *stack)
 */
 void	ft_swap(t_stack *stack, char *option)
 {
-	ft_swap(stack);
+	ft_swap_(stack);
 	ft_printf("%s", option);
 }
 /*
@@ -53,7 +41,7 @@ void	ft_swap(t_stack *stack, char *option)
 */
 void	ft_double_swap(t_stack *stack_a, t_stack *stack_b)
 {
-	ft_swap(stack_a);
-	ft_swap(stack_b);
+	ft_swap_(stack_a);
+	ft_swap_(stack_b);
 	ft_printf("%s", SWAP);
 }
