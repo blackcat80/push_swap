@@ -8,14 +8,14 @@ static int	ft_can_swap_a(t_stack *stack_a)
 	t_node	*second;
 
 	if (stack_a->size < 2)
-		return (FALSE);
+		return (0);
 	top = stack_a->top;
 	second = stack_a->top->next;
 	if (top->group != second->group)
-		return (FALSE);
+		return (0);
 	if (top->element > second->element)
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
 
 static int	ft_can_swap_b(t_stack *stack_b)
@@ -24,14 +24,14 @@ static int	ft_can_swap_b(t_stack *stack_b)
 	t_node	*second;
 
 	if (stack_b->size < 2)
-		return (FALSE);
+		return (0);
 	top = stack_b->top;
 	second = stack_b->top->next;
 	if (top->group != second->group)
-		return (FALSE);
+		return (0);
 	if (top->element < second->element)
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
 
 void	ft_can_swap(t_stack *stack_a, t_stack *stack_b)

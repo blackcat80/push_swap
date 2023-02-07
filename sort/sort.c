@@ -19,12 +19,12 @@ void	ft_sort_three(t_stack *stack_a, int *sort)
 	top = stack_a->top;
 	mid = top->next;
 	if (sort[2] == top->element)
-		ft_rotate_a(stack_a);
+		ft_rotate(stack_a, ROTATE_A);
 	if (sort[2] == mid->element)
-		ft_rev_rotate_a(stack_a);
+		ft_rev_rotate(stack_a, REV_ROTATE_A);
 	mid = stack_a->top->next;
 	if (sort[0] == mid->element)
-		ft_swap_a(stack_a);
+		ft_swap(stack_a, SWAP_A);
 }
 
 /* Si el tamaño de la pila es igual a dos, la función utiliza la función "ft_swap_a" para intercambiar los dos elementos de la pila, 
