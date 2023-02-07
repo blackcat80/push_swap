@@ -1,6 +1,6 @@
 
 
-#include "./push_swap.h"
+#include "../push_swap.h"
 
 static int	ft_can_swap_a(t_stack *stack_a)
 {

@@ -3,7 +3,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include"./libft/libft.h"
+# include"../libft/libft.h"
 
 # define SUCCESS 0
 
@@ -63,26 +63,18 @@ void	ft_free_null(void *pointer);
 //main.c
 void	ft_error_exit(void);
 
-//FUNCION MODIFICADA POR DANNY
-//void	ft_swap_a(t_stack *stack_a);
-//void	ft_swap_b(t_stack *stack_b);
+
 void	ft_swap(t_stack *stack, char *option);
 void	ft_double_swap(t_stack *stack_a, t_stack *stack_b);
 
-//FUNCION MODIFICADA POR DANNY
-//void	ft_push_a(t_stack *stack_a, t_stack *stack_b);
-//void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
-void ft_push(t_stack *stack_a, t_stack *stack_b, char *option);
 
-//FUNCION MODIFICADA POR DANNY
-//void	ft_rotate_a(t_stack *stack_a);
-//void	ft_rotate_b(t_stack *stack_b);
+void	ft_push(t_stack *stack_a, t_stack *stack_b, char *option);
+
+
 void	ft_rotate(t_stack *stack, char *option);
 void	ft_double_rotate(t_stack *stack_a, t_stack *stack_b);
 
-//FUNCION MODIFICADA POR DANNY
-//void	ft_rev_rotate_a(t_stack *stack_a);
-//void	ft_rev_rotate_b(t_stack *stack_b);
+
 void	ft_rev_rotate(t_stack *stack, char *option);
 void	ft_double_rev_rotate(t_stack *stack_a, t_stack *stack_b);
 
@@ -92,8 +84,7 @@ void	ft_sort_three(t_stack *stack_a, int *sort);
 
 //sort_all.c
 void	ft_sort_all(t_stack *stack_a, t_stack *stack_b, int *sort, int first);
-//static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value);
-//static int	ft_change_direction(t_node *top, int group, int reverse);
+
 
 //return_stack_b.c
 void	ft_return_stack(t_stack *stack_a,t_stack *stack_b,t_pivot pivot, int *sort);

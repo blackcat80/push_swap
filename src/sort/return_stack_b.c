@@ -1,5 +1,5 @@
 
-#include "./push_swap.h"
+#include "../push_swap.h"
 
 static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value)
 {

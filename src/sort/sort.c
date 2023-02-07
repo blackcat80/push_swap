@@ -1,5 +1,5 @@
 
-#include "./push_swap.h"
+#include "../push_swap.h"
 
 /* La función "ft_sort_three" se utiliza para ordenar tres elementos en una pila "stack_a". 
 La función toma dos argumentos, la pila y un arreglo de enteros "sort".

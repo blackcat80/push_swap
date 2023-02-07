@@ -1,4 +1,5 @@
-#include"./push_swap.h"
+#include"../push_swap.h"
+
 /* Función que extrae el primer elemento de la pila stack_pop y lo inserta en 
   la pila stack_push ejem: ft_pop_push(stack_b, stack_a) o 
   ft_pop_push(stack_a, stack_b). */

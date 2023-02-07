@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./push_swap.h"
+#include "../push_swap.h"
 
 /*
 **	Función que ordena los números de la lista en un array de enteros.

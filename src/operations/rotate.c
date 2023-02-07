@@ -1,4 +1,4 @@
-#include"./push_swap.h"
+#include"../push_swap.h"
 
 /*
 	**Función que rota la pila hacia arriba (el primer elemento pasa a ser el

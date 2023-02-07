@@ -5,6 +5,7 @@ LIBFT = libft.a
 LIBFT_DIR = ./libft/
 HEADER = push_swap.h
 INCLUDE = -I ./
+SRC_DIR = ./src/
 
 # ============================= COMPILATE ==================================== #
 
@@ -14,8 +15,8 @@ CFLAGS					= -Wall -Werror -Wextra -g
 
 # =========================== DIRECTORIES ==================================== #
 
-OBJ_DIR				= obj_dir
-OBJ_SRC 			= $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+OBJ_DIR				= ./obj_dir
+OBJ_SRC 			= $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 
 # =========================== SOURCES ======================================== #
 
@@ -24,7 +25,13 @@ SRC = main.c free_resources.c\
 		stack/stack.c\
 		sort/sort.c sort/sort_all.c sort/return_stack_b.c\
  		operations/swap.c operations/push.c operations/rotate.c\
-		operations/reverse_rotate.c 
+		operations/reverse_rotate.c\
+
+VPATH = $(SRC_DIR)\
+		 $(SRC_DIR)stack\
+		 $(SRC_DIR)parse\
+		 $(SRC_DIR)operations\
+		 $(SRC_DIR)sort
 
 # =========================== BOLD COLORS ==================================== #
 
@@ -49,27 +56,31 @@ all: $(NAME)
 	@touch $(NAME)
 
 $(NAME):$(OBJ_SRC)
-	@$(CC) $(CFLAGS) $(OBJ_SRC) -L$(LIBFT_DIR)$(LIBFT) $(INCLUDE)$(LIBFT_DIR) -o $@
+	@make bonus -C  $(LIBFT_DIR)
+	@$(CC) $(CFLAGS) $(OBJ_SRC) -L$(LIBFT_DIR) -lft $(INCLUDE)$(LIBFT_DIR) -o $@
+
+$(OBJ_SRC): | $(OBJ_DIR)
+
+$(OBJ_DIR):
+	@mkdir $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: %.c $(HEADER)
-	@make bonus -C  $(LIBFT_DIR)
-	@mkdir -p $(dir $@)
 	@printf "$(YELLOW)\r $@$(DEF_COLOR)"
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(LIBFT_DIR) -I$(SRC_DIR) -c $< -o $@
 
 # ========================== CLEAN   ===================================== #
 
 .PHONY: all clean fclean re
 
 clean:
-	@$make clean -C ./libft/
+	@make clean -C $(LIBFT_DIR)
 	@$(RM) $(OBJ_DIR)
 	@echo -e "\n$(CYAN)==== push_swap and libft object files cleaned! ==== ✅$(DEF_COLOR)\n"
 	
 fclean: clean 
-	@$make fclean -C ./libft/
+	@make fclean -C $(LIBFT_DIR)
 	@$(RM) $(NAME)
-	@echo -e "\n$(CYAN)==== push_swap libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
+	@echo -e "\n$(CYAN)==== push_swap and libft executable files and name cleaned! ==== ✅$(DEF_COLOR)\n"
 
 re : fclean all
 	@echo -e "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap and libft! ==== ✅$(DEF_COLOR)\n"

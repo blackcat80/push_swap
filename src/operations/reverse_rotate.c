@@ -1,4 +1,5 @@
-#include"./push_swap.h"
+#include"../push_swap.h"
+
 
 /*
 	**Función que mueve el top de la pila stack al final de la misma.

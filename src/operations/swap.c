@@ -1,4 +1,4 @@
-#include"./push_swap.h"
+#include"../push_swap.h"
 
 /*
 	**Función que intercambia el primer y segundo elemento de la pila.

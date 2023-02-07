@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./push_swap.h"
+#include "../push_swap.h"
 
 /*
 **	Función que comprueba si una cadena de caracteres es un número.
