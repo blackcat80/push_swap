@@ -45,16 +45,16 @@ void	ft_return_stack(t_stack *stack_a, t_stack *stack_b,	t_pivot pivot, int *sor
 		reverse = ft_find_sort_way(stack_b, pivot, sort[pivot.index]);
 		if (stack_b->top->element == sort[pivot.index])
 		{
-			ft_push_a(stack_a, stack_b);
+			ft_push(stack_a, stack_b, PUSH_A);
 			pivot.index--;
 			pivot.qtd--;
 		}
 		else
 		{
 			if (reverse)
-				ft_rev_rotate_b(stack_b);
+				ft_rev_rotate(stack_b, REV_ROTATE_B);
 			else
-				ft_rotate_b(stack_b);
+				ft_rotate(stack_b, ROTATE_B);
 		}
 		reverse = ft_change_direction(stack_b->top, pivot.group, reverse);
 	}

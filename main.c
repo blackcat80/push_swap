@@ -2,7 +2,7 @@
 
 void	ft_error_exit(void)
 {
-	ft_putstr_fd("Error\n", 2);
+	ft_printf("-->Error\n");
 	exit(-1);
 }
 
@@ -17,12 +17,12 @@ int	ft_is_already_sort(t_list *list)
 	{
 		next_number = (int *)list->content;
 		if (*number < *next_number)
-			return (FALSE);
+			return (0);
 		number = next_number;
 		list = list->next;
 	}
 	ft_lstclear(&list, ft_free_null);
-	return (TRUE);
+	return (1);
 }
 
 void	ft_initialize_stack_a(t_stack *stack_a, t_list *reverse_input)
