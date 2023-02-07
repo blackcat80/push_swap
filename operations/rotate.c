@@ -4,7 +4,7 @@
 	**Función que rota la pila hacia arriba (el primer elemento pasa a ser el
 	**último).
 */
-void	ft_rotate_(t_stack *stack)
+static void	ft_rotate_op(t_stack *stack)
 {
 	stack->top = stack->top->next;
 }
@@ -14,7 +14,7 @@ void	ft_rotate_(t_stack *stack)
 */
 void ft_rotate(t_stack *stack, char *option)
 {
-	ft_rotate_(stack);
+	ft_rotate_op(stack);
 	ft_printf("%s", option);
 }
 
@@ -24,7 +24,7 @@ void ft_rotate(t_stack *stack, char *option)
 */
 void	ft_double_rotate(t_stack *stack_a, t_stack *stack_b)
 {
-	ft_rotate_(stack_a);
-	ft_rotate_(stack_b);
+	ft_rotate_op(stack_a);
+	ft_rotate_op(stack_b);
 	ft_printf("%s", ROTATE);
 }
