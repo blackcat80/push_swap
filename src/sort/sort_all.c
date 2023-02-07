@@ -1,5 +1,3 @@
-
-
 #include "../push_swap.h"
 
 static int	ft_can_swap_a(t_stack *stack_a)
@@ -68,7 +66,7 @@ static void	ft_split_stack(t_stack *stack_a, t_stack *stack_b, t_pivot pivot)
 
 static t_pivot	ft_get_pivot(int *sort, int size, int first)
 {
-	t_pivot	 pivot;
+	t_pivot	pivot;
 
 	if (size < 10)
 		pivot.index = size / 2;

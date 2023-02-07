@@ -1,20 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 10:47:24 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/06 10:47:24 by dacortes         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../push_swap.h"
 
-/*
-**	Función que comprueba si una cadena de caracteres es un número.
-*/
+//Función que comprueba si una cadena de caracteres es un número.
+
 static int	ft_is_string_number(char *string)
 {
 	int	i;
@@ -28,9 +15,8 @@ static int	ft_is_string_number(char *string)
 	return (1);
 }
 
-/*
-**	Función que comprueba si un número es un entero.
-*/
+//Función que comprueba si un número es un entero.
+
 static int	ft_is_integer(long number)
 {
 	if (number > INT_MAX)
@@ -39,10 +25,9 @@ static int	ft_is_integer(long number)
 		return (0);
 	return (1);
 }
-/*
-**	Función que comprueba si una cadena de caracteres es un número y lo
-**	almacena en un entero.
-*/
+
+// almacena en un entero.
+
 static int	ft_parse_number(char *str_number, int *number)
 {
 	int	lnumber;
@@ -53,9 +38,9 @@ static int	ft_parse_number(char *str_number, int *number)
 	*number = (int)lnumber;
 	return (ft_is_integer(lnumber));
 }
-/*
-** Función que parsea los argumentos de entrada y los almacena en una lista
-*/
+
+// Función que parsea los argumentos de entrada y los almacena en una lista
+
 static void	ft_parse_input(char **input, t_list **reverse_input, int **sort)
 {
 	int		*number;
@@ -73,9 +58,9 @@ static void	ft_parse_input(char **input, t_list **reverse_input, int **sort)
 	ft_list_to_array(&sorted_list, sort);
 	ft_free_list(&sorted_list);
 }
-/*
-** Función que analiza los argumentos de entrada y los almacena en una lista
-*/
+
+// Función que analiza los argumentos de entrada y los almacena en una lista
+
 void	ft_parse(int argc, char **argv, t_list **reverse_input, int **sort)
 {
 	char	**input;

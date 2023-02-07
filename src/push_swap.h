@@ -42,7 +42,7 @@ typedef struct s_pivot
 	int		first;
 }			t_pivot;
 
-// ========================== OPERATIONS ===================================== //
+// ========================== OPERATIONS ============================= //
 
 void	ft_push(t_stack *stack_a, t_stack *stack_b, char *option);
 void	ft_rev_rotate(t_stack *stack, char *option);
@@ -52,20 +52,21 @@ void	ft_double_rotate(t_stack *stack_a, t_stack *stack_b);
 void	ft_swap(t_stack *stack, char *option);
 void	ft_double_swap(t_stack *stack_a, t_stack *stack_b);
 
-// ========================== PARSE ===================================== //
+// ========================== PARSE =================================== //
 
 void	ft_parse(int argc, char **argv, t_list **reverse_input, int **sort);
 void	ft_list_to_array(t_list	**list, int **sort);
 void	ft_add_number_sorting(t_list *new, t_list **list);
 
-// ========================== SORT ======================================= //
+// ========================== SORT ===================================== //
 
 void	ft_sort(t_stack *stack_a, int *sort);
 void	ft_sort_three(t_stack *stack_a, int *sort);
 void	ft_sort_all(t_stack *stack_a, t_stack *stack_b, int *sort, int first);
-void	ft_return_stack(t_stack *stack_a,t_stack *stack_b,t_pivot pivot, int *sort);
+void	ft_return_stack(t_stack *stack_a, t_stack *stack_b,
+			t_pivot pivot, int *sort);
 
-// ========================== STACK ======================================= //
+// ========================== STACK ===================================== //
 
 void	ft_connect(t_node *first, t_node *second);
 void	ft_new_stack(t_stack *stack);
@@ -82,4 +83,3 @@ void	ft_free_null(void *pointer);
 void	ft_error_exit(void);
 
 #endif
-

@@ -1,20 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   sort_input.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 10:40:58 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/06 10:40:58 by dacortes         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../push_swap.h"
 
-/*
-**	Función que ordena los números de la lista en un array de enteros.
-*/
+//Función que ordena los números de la lista en un array de enteros.
+
 void	ft_list_to_array(t_list	**list, int **sort)
 {
 	int		size;
@@ -35,9 +22,8 @@ void	ft_list_to_array(t_list	**list, int **sort)
 	}
 }
 
-/*
-**	Función que ordena los números de la lista en orden ascendente.
-*/
+// Función que ordena los números de la lista en orden ascendente.
+
 void	ft_add_number_sorting(t_list *new, t_list **list)
 {
 	t_list	*tmp;

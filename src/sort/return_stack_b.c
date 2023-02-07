@@ -1,4 +1,3 @@
-
 #include "../push_swap.h"
 
 static int	ft_find_sort_way(t_stack *stack_b, t_pivot pivot, int value)
@@ -31,7 +30,8 @@ static int	ft_change_direction(t_node *top, int group, int reverse)
 	return (reverse);
 }
 
-void	ft_return_stack(t_stack *stack_a, t_stack *stack_b,	t_pivot pivot, int *sort)
+void	ft_return_stack(t_stack *stack_a, t_stack *stack_b,	
+			t_pivot pivot, int *sort)
 {
 	int	reverse;
 

@@ -26,19 +26,19 @@ static void	ft_swap_op(t_stack *stack)
 	}
 	stack->top = second;
 }
-/*
-	**Función general que permite intercambiar el primer y segundo elemento de
-	**una pila.
-*/
+
+// Función general que permite intercambiar el primer y 
+// segundo elemento de una pila.
+
 void	ft_swap(t_stack *stack, char *option)
 {
 	ft_swap_op(stack);
 	ft_printf("%s", option);
 }
-/*
-	**Función que intercambia el primer y segundo elemento de las pilas stack_a
-	**y stack_b.
-*/
+
+// Función que intercambia el primer y segundo elemento 
+// de las pilas stack_a y stack_b.
+
 void	ft_double_swap(t_stack *stack_a, t_stack *stack_b)
 {
 	ft_swap_op(stack_a);
