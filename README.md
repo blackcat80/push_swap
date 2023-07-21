@@ -18,6 +18,12 @@ Los números proporcionados pueden ser enteros positivos o negativos. No debe ha
 
 Si los argumentos son válidos, el programa mostrará la lista de acciones más eficiente para ordenar la lista.
 
+```
+$ ./push_swap 1 3 2 4
+pb
+sa
+pa
+```
 ## Bonus
 3. Ejecuta `make bonus` para compilar el checker.
 
@@ -47,9 +53,9 @@ OK
 <a href="https://pinetools.com/es/generador-numeros-aleatorios" rel="noopener">Generador de números aleatorios</a>
 
 ## Reglas del proyecto
-El programa se compone de dos stacks (a y b).  
-En el stack_a tendrás números positivos y/o negativos, nunca duplicados  .  
-El stack_b empezará vacio.
+- El programa se compone de dos stacks (a y b).  
+- En el stack_a tendrás números positivos y/o negativos, nunca duplicados  .  
+- El stack_b empezará vacio.
 
 ### Operaciones que tienes a tu disposición:
 
@@ -71,21 +77,20 @@ El stack_b empezará vacio.
 
 Puntuación según la eficiencia del proceso de ordenación del programa:
 
-1. Ordenar 3 valores: Se requiere un máximo de 3 acciones para obtener la máxima calificación.
-2. Ordenar 5 valores: El proceso de ordenación no debe exceder las 12 acciones para obtener la calificación más alta.
+- Ordenar <span style="color:orange">**3 valores:**</span>  con un máximo de 3 acciones para obtener la máxima puntuación.
 
-|          |     100 Numeros     |          |     500 Numeros     |
-| Operaciones | Puntos | Operaciones | Puntos |
-| :---: | :---: | :---: | :---: |
-| Menos de 700 | 5 | Menos de 5500 | 5 |
-| Menos de 900 | 4 | Menos de 7000 | 4 |
-| Menos de 1100 | 3 | Menos de 8500 | 3 |
-| Menos de 1300 | 2 | Menos de 10000 | 2 |
-| Menos de 1500 | 1 | Menos de 11500 | 1 |
+- Ordenar <span style="color:orange">**5 valores:**</span>  El proceso de ordenación no debe exceder las 12 acciones para obtener la puntuación más alta.
 
+|| <span style="color:orange; font-size: larger">**100 Números**</span> || <span style="color:orange; font-size: larger">**500 Números**</span> ||
+| :---: | :---: | :---: | :---: | :---: |
+| <span style="color:orange">**Operaciones**</span> | <span style="color:">**Puntos**</span> | <span style="color:orange">**Operaciones**</span> | <span style="color:">**Puntos**</span> |
+| Menos de 700 | <strong>5</strong> | Menos de 5500 | <strong>5</strong> |
+| Menos de 900 | <strong>4</strong> | Menos de 7000 | <strong>4</strong> |
+| Menos de 1100 | <strong>3</strong> | Menos de 8500 | <strong>3</strong> |
+| Menos de 1300 | <strong>2</strong> | Menos de 10000 | <strong>2</strong> |
+| Menos de 1500 | <strong>1</strong> | Menos de 11500 | <strong>1</strong> |  
 
-
-La eficiencia del proceso de ordenación determina la calificación final del programa, donde una menor cantidad de acciones requeridas se traduce en una calificación más alta.
+La eficiencia del proceso de ordenación determina la puntuación final del programa, donde una menor cantidad de acciones requeridas se traduce en una puntuación más alta.
 
 Buena suerte! 😁
 
