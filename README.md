@@ -24,7 +24,7 @@ pb
 sa
 pa
 ```
-## Bonus
+## Bonus ⭐️ :fire:
 3. Ejecuta `make bonus` para compilar el checker.
 
 
