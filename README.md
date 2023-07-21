@@ -1,6 +1,6 @@
 ![Image text](https://github.com/blackcat80/push_swap/blob/main/push_swap.png)
 
-**<span style="color:orange; font-size: larger">**Push_swap**</span>** es un proyecto de algoritmos, que te hará ordenar datos en un stack, con un conjunto limitado de instrucciones, y utilizando el menor número de instrucciones posibles.
+**<span style="color:orange; font-size: larger">Push_swap**</span> es un proyecto de algoritmos, que te hará ordenar datos en un stack, con un conjunto limitado de instrucciones, y utilizando el menor número de instrucciones posibles.
 
 ## Uso
 1. Clona el repositorio con `Git` y navega hacia él con `cd`.
@@ -74,8 +74,6 @@ OK
 | rrr | rota hacia abajo tanto la pila A como la pila B |
 
 ## Puntuación 
-
-Puntuación según la eficiencia del proceso de ordenación del programa:
 
 - Ordenar <span style="color:orange">**3 valores:**</span>  con un máximo de 3 acciones para obtener la máxima puntuación.
 
