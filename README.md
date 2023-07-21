@@ -13,7 +13,7 @@ Luego ejecútalo con:
 
 Los números proporcionados pueden ser enteros positivos o negativos. No debe haber duplicados. Por ejemplo:
 ```
-./push_swap 9 0 -217 2147483647 -2147483648
+./push_swap 86 -14 0 -217 2147483647 -2147483648 004 -03
 ```
 
 Si los argumentos son válidos, el programa mostrará la lista de acciones más eficiente para ordenar la lista.
@@ -24,12 +24,12 @@ Si los argumentos son válidos, el programa mostrará la lista de acciones más 
 
 Ahora ya podemos verificar el resultado con nuestro checker de esta manera:
 ```
-ARG="3 0 9 2 -1"; ./push_swap $ARG | ./checker $ARG
+ARG="7 13 -2 90"; ./push_swap $ARG | ./checker $ARG
 ```
 Tambien puedes usar el proporcionado "checker_linux (si no usas Mac) o checker_Mac":
 ```
-ARG="3 0 9 2 -1"; ./push_swap $ARG | ./checker_linux $ARG
-ARG="3 0 9 2 -1"; ./push_swap $ARG | ./checker_Mac $ARG
+ARG="7 13 -2 90"; ./push_swap $ARG | ./checker_linux $ARG
+ARG="7 13 -2 90"; ./push_swap $ARG | ./checker_Mac $ARG
 ```
 Con pocos números puedes ejecutar el checker de forma manual, escribiendo las acciones una a una, al finalizar tan solo presionar `ctrl + d` para obtener el resultado:
 ```
@@ -43,45 +43,56 @@ sa
 pa
 OK
 ```
+## Link para generar números aleatorios
 <a href="https://pinetools.com/es/generador-numeros-aleatorios" rel="noopener">Generador de números aleatorios</a>
 
-## Reglas y calificación de Push_Swap
-El programa solo tiene permitido dos pilas para trabajar, pila A y pila B. Todos los números se agregan inicialmente a la pila A, y la pila B está vacía.
+## Reglas del proyecto
+El programa se compone de dos stacks (a y b).  
+En el stack_a tendrás números positivos y/o negativos, nunca duplicados  .  
+El stack_b empezará vacio.
 
-Las acciones posibles son:
+### Operaciones que tienes a tu disposición:
 
-- `pa` (push A): Toma el primer elemento en la parte superior de B y colócalo en la parte superior de A. No hace nada si B está vacía.
-- `pb` (push B): Toma el primer elemento en la parte superior de A y colócalo en la parte superior de B. No hace nada si A está vacía.
-- `sa` (swap A): Intercambia los primeros 2 elementos en la parte superior de la pila A. No hace nada si hay solo un elemento o ningún elemento.
-- `sb` (swap B): Intercambia los primeros 2 elementos en la parte superior de la pila B. No hace nada si hay solo un elemento o ningún elemento.
-- `ss`: `sa` y `sb` al mismo tiempo.
-- `ra` (rotate A): Desplaza todos los elementos de la pila A hacia arriba en 1 posición. El primer elemento se convierte en el último.
-- `rb` (rotate B): Desplaza todos los elementos de la pila B hacia arriba en 1 posición. El primer elemento se convierte en el último.
-- `rr`: `ra` y `rb` al mismo tiempo.
-- `rra` (reverse rotate A): Desplaza todos los elementos de la pila A hacia abajo en 1 posición. El último elemento se convierte en el primero.
-- `rrb` (reverse rotate B): Desplaza todos los elementos de la pila B hacia abajo en 1 posición. El último elemento se convierte en el primero.
-- `rrr`: `rra` y `rrb` al mismo tiempo.
+| Instrucciones | Descripción |
+|--|--|
+| sa | intercambia los dos primeros elementos de la pila A |
+| sb | intercambia los dos primeros elementos de la pila B |
+| ss | hace sa y sb al mismo tiempo |
+| pa | saca el primer elemento de B y lo coloca en la parte superior de A |
+| pb | saca el primer elemento de A y lo coloca en la parte superior de B |
+| ra | rota hacia arriba la pila A (el primer elemento se mueve al final) |
+| rb | rota hacia arriba la pila B (el primer elemento se mueve al final) |
+| rr | rota hacia arriba tanto la pila A como la pila B |
+| rra | rota hacia abajo la pila A (el último elemento se mueve al principio) |
+| rrb | rota hacia abajo la pila B (el último elemento se mueve al principio) |
+| rrr | rota hacia abajo tanto la pila A como la pila B |
 
-La calificación depende de la eficiencia del proceso de ordenación del programa.
+## Puntuación 
 
-- Ordenar 3 valores: no más de 3 acciones.
-- Ordenar 5 valores: no más de 12 acciones.
-- Ordenar 100 valores: calificación de 1 a 5 puntos según el número de acciones:
-  - 5 puntos para menos de 700 acciones.
-  - 4 puntos para menos de 900 acciones.
-  - 3 puntos para menos de 1100 acciones.
-  - 2 puntos para menos de 1300 acciones.
-  - 1 punto para menos de 1500 acciones.
-- Ordenar 500 valores: calificación de 1 a 5 puntos según el número de acciones:
-  - 5 puntos para menos de 5500 acciones.
-  - 4 puntos para menos de 7000 acciones.
-  - 3 puntos para menos de 8500 acciones.
-  - 2 puntos para menos de 10000 acciones.
-  - 1 punto para menos de 11500 acciones.
+Puntuación según la eficiencia del proceso de ordenación del programa:
 
-Validar el proyecto requiere al menos 80/100.
+1. Ordenar 3 valores: Se requiere un máximo de 3 acciones para obtener la máxima calificación.
+2. Ordenar 5 valores: El proceso de ordenación no debe exceder las 12 acciones para obtener la calificación más alta.
 
-Hacer el bonus con tu propio checker te da una nota de 125 en el proyecto.
+### 🔹 100 Numeros:      🔹 500 Numeros:     
+
+| Operaciones | Puntos |      | Operaciones | Puntos |  
+| :---: | :---: |         | :---: | :---: |  
+| Menos de 700 | 5 |      | Menos de 5500 | 5 |  
+| Menos de 900 | 4 |      | Menos de 7000 | 4 |  
+| Menos de 1100 | 3 |     | Menos de 8500 | 3 |  
+| Menos de 1300 | 2 |     | Menos de 10000 | 2 |  
+| Menos de 1500 | 1 |     | Menos de 11500 | 1 |
+
+Para ordenar 500 valores:
+
+- 5 puntos: Si se utilizan menos de 5500 acciones.
+- 4 puntos: Si se utilizan menos de 7000 acciones.
+- 3 puntos: Si se utilizan menos de 8500 acciones.
+- 2 puntos: Si se utilizan menos de 10000 acciones.
+- 1 punto: Si se utilizan menos de 11500 acciones.
+
+La eficiencia del proceso de ordenación determina la calificación final del programa, donde una menor cantidad de acciones requeridas se traduce en una calificación más alta.
 
 Buena suerte! 😁
 
