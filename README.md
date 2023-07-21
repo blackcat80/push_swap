@@ -74,23 +74,16 @@ Puntuación según la eficiencia del proceso de ordenación del programa:
 1. Ordenar 3 valores: Se requiere un máximo de 3 acciones para obtener la máxima calificación.
 2. Ordenar 5 valores: El proceso de ordenación no debe exceder las 12 acciones para obtener la calificación más alta.
 
-### 🔹 100 Numeros:      🔹 500 Numeros:     
+|          |     100 Numeros     |          |     500 Numeros     |
+| Operaciones | Puntos | Operaciones | Puntos |
+| :---: | :---: | :---: | :---: |
+| Menos de 700 | 5 | Menos de 5500 | 5 |
+| Menos de 900 | 4 | Menos de 7000 | 4 |
+| Menos de 1100 | 3 | Menos de 8500 | 3 |
+| Menos de 1300 | 2 | Menos de 10000 | 2 |
+| Menos de 1500 | 1 | Menos de 11500 | 1 |
 
-| Operaciones | Puntos |      | Operaciones | Puntos |  
-| :---: | :---: |         | :---: | :---: |  
-| Menos de 700 | 5 |      | Menos de 5500 | 5 |  
-| Menos de 900 | 4 |      | Menos de 7000 | 4 |  
-| Menos de 1100 | 3 |     | Menos de 8500 | 3 |  
-| Menos de 1300 | 2 |     | Menos de 10000 | 2 |  
-| Menos de 1500 | 1 |     | Menos de 11500 | 1 |
 
-Para ordenar 500 valores:
-
-- 5 puntos: Si se utilizan menos de 5500 acciones.
-- 4 puntos: Si se utilizan menos de 7000 acciones.
-- 3 puntos: Si se utilizan menos de 8500 acciones.
-- 2 puntos: Si se utilizan menos de 10000 acciones.
-- 1 punto: Si se utilizan menos de 11500 acciones.
 
 La eficiencia del proceso de ordenación determina la calificación final del programa, donde una menor cantidad de acciones requeridas se traduce en una calificación más alta.
 
