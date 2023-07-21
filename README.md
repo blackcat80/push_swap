@@ -77,7 +77,7 @@ OK
 
 - Ordenar <span style="color:orange">**3 valores:**</span>  con un máximo de 3 acciones para obtener la máxima puntuación.
 
-- Ordenar <span style="color:orange">**5 valores:**</span>  El proceso de ordenación no debe exceder las 12 acciones para obtener la puntuación más alta.
+- Ordenar <span style="color:orange">**5 valores:**</span>  con un máximo de 12 acciones para obtener la puntuación más alta.
 
 || <span style="color:orange; font-size: larger">**100 Números**</span> || <span style="color:orange; font-size: larger">**500 Números**</span> ||
 | :---: | :---: | :---: | :---: | :---: |
