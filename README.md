@@ -90,7 +90,7 @@ OK
 
 La eficiencia del proceso de ordenación determina la puntuación final del programa, donde una menor cantidad de acciones requeridas se traduce en una puntuación más alta.
 
-Buena suerte! 😁
+Buena suerte! <span style="font-size: x-large">**✌️**</span>
 
 ## Créditos y uso del test
 
