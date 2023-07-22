@@ -41,12 +41,12 @@ int			nb_abs(int nb);
 
 // Stack functions
 
+t_stack		*stack_new(int value);
+t_stack		*fill_stack_values(int ac, char **av);
+int			get_stack_size(t_stack	*stack);
 t_stack		*get_stack_bottom(t_stack *stack);
 t_stack		*get_stack_before_bottom(t_stack *stack);
-t_stack		*stack_new(int value);
 void		stack_add_bottom(t_stack **stack, t_stack *new);
-int			get_stack_size(t_stack	*stack);
-t_stack		*fill_stack_values(int ac, char **av);
 void		assign_index(t_stack *stack_a, int stack_size);
 void		get_target_position(t_stack **a, t_stack **b);
 int			get_lowest_index_position(t_stack **stack);
