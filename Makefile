@@ -6,7 +6,7 @@
 #    By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 23:44:57 by csitja-b          #+#    #+#              #
-#    Updated: 2023/07/22 03:46:35 by csitja-b         ###   ########.fr        #
+#    Updated: 2023/07/22 07:13:20 by csitja-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,10 +63,6 @@ MAGENTA     = \033[1;95m
 CYAN        = \033[1;96m
 WHITE       = \033[1;97m
 
-# =========================== BACKGROUND COLORS ============================ #
-
-BG_Black    =\033[40m
-
 # ========================== MAKE RULES ===================================== #
 
 $(OBJ_DIR)%.o: %.c
@@ -77,11 +73,11 @@ $(OBJ_DIR)%.o: %.c
 all: $(NAME)
 	
 $(NAME): $(OBJS)
-	@echo "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== $(DEF_COLOR)$(BG_Black)\n"
+	@echo "\n\n$(GREEN)==== Project push_swap compiled! ==== $(DEF_COLOR)\n"
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 bonus: $(OBJ_BONUS)	
-	@echo "\n\n$(BG_Purple)$(GREEN)==== Bonus push_swap compiled! ==== $(DEF_COLOR)$(BG_Black)\n"
+	@echo "\n\n$(GREEN)==== Bonus push_swap compiled! ==== $(DEF_COLOR)\n"
 	@$(CC) $(CFLAGS) $(OBJ_BONUS) -o $(NAME_BONUS)
 
 clean:
