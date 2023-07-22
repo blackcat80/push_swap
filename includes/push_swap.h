@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 04:39:38 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 04:43:11 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void		free_stack(t_stack **stack);
 void		exit_error(t_stack **stack_a, t_stack **stack_b);
 long int	ft_atoi(const char *str);
 void		ft_putstr(char *str);
-int			nb_abs(int nb);
+int		   nb_abs(int nb);
 
 // Stack functions
 
