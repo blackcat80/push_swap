@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+         #
+#    By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 23:44:57 by csitja-b          #+#    #+#              #
-#    Updated: 2023/07/22 07:24:33 by csitja-b         ###   ########.fr        #
+#    Updated: 2023/07/22 17:02:26 by csitja-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ BONUS = $(addprefix $(BONUS_SRC_DIR), $(BONUS_SRC))
 # =========================== DIRECTORIES ==================================== #
 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
-OBJ_BONUS = $(addprefix $(OBJ_DIR), $(BONUS:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_BNS_DIR), $(BONUS:.c=.o))
 
 # =========================== BOLD COLORS ==================================== #
 
@@ -66,10 +66,16 @@ WHITE       = \033[1;97m
 
 # ========================== MAKE RULES ===================================== #
 
-$(OBJ_DIR)%.o: %.c
+$(OBJ_DIR)%.o: %.c includes/push_swap.h
 	@mkdir -p $(dir $@)
 	@printf "$(YELLOW)\n $@$(DEF_COLOR)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+
+$(OBJ_BNS_DIR)%.o: %.c includes/push_swap_bonus.h
+	@mkdir -p $(dir $@)
+	@printf "$(YELLOW)\n $@$(DEF_COLOR)"
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+
 
 all: $(NAME)
 	
@@ -77,12 +83,14 @@ $(NAME): $(OBJS)
 	@echo "\n\n$(GREEN)==== Project push_swap compiled! ==== $(DEF_COLOR)\n"
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-bonus: $(OBJ_BONUS)	
+bonus: $(NAME_BONUS)	
+
+$(NAME_BONUS): $(OBJ_BONUS)
 	@echo "\n\n$(GREEN)==== Bonus push_swap compiled! ==== $(DEF_COLOR)\n"
 	@$(CC) $(CFLAGS) $(OBJ_BONUS) -o $(NAME_BONUS)
 
 clean:
-	@$(RM) $(OBJ_DIR)
+	@$(RM) $(OBJ_DIR) $(OBJ_BNS_DIR)
 	@echo "\n$(CYAN)==== push_swap and objects files cleaned! ==== $(DEF_COLOR)\n"
 
 fclean: clean
