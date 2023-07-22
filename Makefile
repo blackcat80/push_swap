@@ -6,7 +6,7 @@
 #    By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 23:44:57 by csitja-b          #+#    #+#              #
-#    Updated: 2023/07/21 00:40:39 by csitja-b         ###   ########.fr        #
+#    Updated: 2023/07/22 02:30:24 by csitja-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,7 @@ BONUS_SRC	= checker_bonus.c \
 				push_bonus.c reverse_rotate_bonus.c \
 				rotate_bonus.c swap_bonus.c \
 				stack_bonus.c utils_bonus.c \
-				utils2_bonus.c
-
+				
 BONUS = $(addprefix $(BONUS_SRC_DIR), $(BONUS_SRC))
 
 # =========================== DIRECTORIES ==================================== #

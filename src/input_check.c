@@ -6,16 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:05 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/12 00:01:42 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:11:33 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*  arg_is_number:
-   Comprueba si el argumento es un número. +1 1 y -1 son todos números válidos.
-   Devuelve: 1 si el argumento es un número, 0 si no lo es.
-*/
 static int	arg_is_number(char *av)
 {
 	int	i;
@@ -32,11 +28,6 @@ static int	arg_is_number(char *av)
 	return (1);
 }
 
-/*  have_duplicates::
-   Comprueba que no haya duplicados en la array hasta el int max -1
-   Devuelve: 1 si el número está duplicado, 0 si no encuentra ninguno.
-*/
-
 static int	have_duplicates(int *num, int tmp, int max)
 {
 	int	i;
@@ -51,10 +42,6 @@ static int	have_duplicates(int *num, int tmp, int max)
 	return (0);
 }
 
-/*  is_correct_input:
-   Comprueba si los argumentos dados son todos números, sin duplicados.
-   Devuelve: 1 si los argumentos son válidos, 0 si no.
-*/
 int	is_correct_input(char **av, int ac)
 {
 	int	i;

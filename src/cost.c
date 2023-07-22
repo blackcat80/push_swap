@@ -6,22 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:02 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/15 00:36:07 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:12:45 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*  get_cost:
-	Calcula el costo de mover cada elemento de la pila B al lugar correcto
-	posición en la pila A.
-	Se calculan dos costes:
-	cost_b representa el costo de llevar el elemento a la parte superior de la 
-	pila B
-	cost_a representa el costo de llegar a la posición correcta en la pila A.
-	Si el elemento está en la mitad inferior de la pila, el costo será negativo,
-	si está en la mitad superior, el costo es positivo.
-*/
 void	get_cost(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*tmp_a;
@@ -45,10 +35,6 @@ void	get_cost(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
-/* do_cheapest_move:
-	Encuentra el elemento en la pila B con el costo más bajo para mover a la pila A
-	y lo mueve a la posición correcta en la pila A.
-*/
 void	do_cheapest_move(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*tmp;

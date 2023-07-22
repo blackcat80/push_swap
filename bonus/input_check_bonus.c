@@ -6,16 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:05 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 03:57:25 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:15:11 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
 
-/*  arg_is_number:
-   Comprueba si el argumento es un número. +1 1 y -1 son todos números válidos.
-   Devuelve: 1 si el argumento es un número, 0 si no lo es.
-*/
 static int	arg_is_number(char *av)
 {
 	int	i;
@@ -32,11 +28,6 @@ static int	arg_is_number(char *av)
 	return (1);
 }
 
-/*  have_duplicates:
-   Comprueba si hay duplicados dentro de un arreglo de enteros.
-   Devuelve: 1 si hay duplicados, 0 si no los hay.
-*/
-
 static int	have_duplicates(int *num, int tmp, int max)
 {
 	int	i;
@@ -50,10 +41,6 @@ static int	have_duplicates(int *num, int tmp, int max)
 	}
 	return (0);
 }
-
-/* ft_atoi:
-   Convierte una cadena alfanumérica de caracteres en un entero largo.
-*/
 
 long int	ft_atoi(const char *str)
 {
@@ -78,11 +65,6 @@ long int	ft_atoi(const char *str)
 	}
 	return (nb * isneg);
 }
-
-/*  is_correct_input:
-   Comprueba si los argumentos dados son todos números, sin duplicados.
-   Devuelve: 1 si los argumentos son válidos, 0 si no.
-*/
 
 int	is_correct_input(char **av, int ac)
 {

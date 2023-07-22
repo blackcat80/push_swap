@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 04:52:02 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:45:45 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,5 @@ void		exit_error(t_stack **stack_a, t_stack **stack_b);
 int			is_correct_input(char **av, int ac);
 int			is_digit(char c);
 int			is_sign(char c);
-int			nbstr_cmp(const char *s1, const char *s2);
 
 #endif

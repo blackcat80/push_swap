@@ -1,21 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_bonus.c                                      :+:      :+:    :+:   */
+/*   utils2_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 19:42:31 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 03:57:33 by csitja-b         ###   ########.fr       */
+/*   Created: 2023/07/19 18:21:51 by csitja-b          #+#    #+#             */
+/*   Updated: 2023/07/19 18:21:51 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
 
-/* free_stack:
-	Libera cada elemento en una pila determinada y establece 
-	el puntero de la pila en NULL.
-*/
+int	is_sorted(t_stack *stack)
+{
+	while (stack->next != NULL)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	while (*s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
+}
+
+void	print_checker_res(t_stack *stack_a, t_stack *stack_b)
+{
+	if (is_sorted(stack_a) && stack_b == NULL)
+		write(1, "OK\n", 3);
+	else
+	{
+		write(1, "KO\n", 3);
+	}
+}
+
 void	free_stack(t_stack **stack)
 {
 	t_stack	*tmp;
@@ -31,10 +58,6 @@ void	free_stack(t_stack **stack)
 	*stack = NULL;
 }
 
-/* exit_error:
-	Escribe "Error\n" en la salida estándar después de liberar las pilas a y b.
-	Sale con el código de error estándar 1.
-*/
 void	exit_error(t_stack **stack_a, t_stack **stack_b)
 {
 	if (stack_a == NULL || *stack_a != NULL)

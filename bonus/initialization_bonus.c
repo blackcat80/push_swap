@@ -6,17 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:24 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:13:04 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:15:22 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/* fill_stack_values:
-	Rellena stack_a con los valores proporcionados.
-	Si los valores están fuera del rango de enteros, se imprime 
-	y se produce un error y se sale del programa.
-*/
 t_stack	*fill_stack_values(int ac, char **av)
 {
 	t_stack		*stack_a;
@@ -40,14 +35,6 @@ t_stack	*fill_stack_values(int ac, char **av)
 	return (stack_a);
 }
 
-/* assign_index:
-	Asigna un índice a cada valor en la pila a. Esta es una manera conveniente 
-	de ordenar la pila porque los índices se pueden verificar y comparar 
-	en lugar de los valores reales,	que pueden o no estar adyacentes entre sí.
-	ex. valores: -3   0   9   2
-	índices:     [1] [2] [4] [3]
-Los índices se asignan desde el más alto (stack_size) hasta el más bajo (1).
-*/	
 void	assign_index(t_stack *stack_a, int stack_size)
 {
 	t_stack	*ptr;

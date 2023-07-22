@@ -6,34 +6,23 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 22:33:28 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/21 01:46:14 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:20:23 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
 
-/*  función comentada, solo por si se quiere consultar
-    los valores actuales del stack_a y poner puntos de control.
-
-void	print_stack(t_stack *stack)
+void	ft_putstr(char *str)
 {
-	while (stack != NULL)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
-}*/
+	int	i;
 
-/* Función execute_commands:
-   Ejecuta diferentes operaciones en las pilas stack_a y stack_b, dependiendo
-   del comando proporcionado.Si el comando no coincide con ninguna operación 
-   conocida, muestra "Error\n" en la salida estándar.
-   Argumentos:
-     - command: Puntero a una cadena que representa el comando a ejecutar.
-     - stack_a: Puntero al puntero que apunta a la pila A.
-     - stack_b: Puntero al puntero que apunta a la pila B.
-*/
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
 
 void	execute_commands(char *command, t_stack **stack_a, t_stack **stack_b)
 {

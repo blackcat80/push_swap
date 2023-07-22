@@ -6,15 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:41:36 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 03:28:23 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:14:36 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
 
-/* rev_rotate:
-	Lleva el elemento inferior de una pila a la parte superior.
-*/
 void	rev_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
@@ -29,26 +26,16 @@ void	rev_rotate(t_stack **stack)
 	before_tail->next = NULL;
 }
 
-/* do_rra:
-	Lleva el elemento inferior de la pila a a la parte superior.
-*/
 void	do_rra(t_stack **stack_a)
 {
 	rev_rotate(stack_a);
 }
 
-/* do_rrb:
-	Lleva el elemento inferior de la pila b a la parte superior.
-*/
 void	do_rrb(t_stack **stack_b)
 {
 	rev_rotate(stack_b);
 }
 
-/* do_rrr:
-	Trae el elemento inferior de la pila a y la pila b
-	a la parte superior de sus respectivas pilas.
-*/
 void	do_rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	rev_rotate(stack_a);

@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 04:44:34 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:45:48 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ void		rev_rotate(t_stack **stack);
 int			is_correct_input(char **av, int ac);
 int			is_digit(char c);
 int			is_sign(char c);
-int			nbstr_cmp(const char *s1, const char *s2);
 long int	ft_atoi(const char *str);
 
 // Utils 

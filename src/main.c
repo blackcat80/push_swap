@@ -6,16 +6,11 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/20 22:33:12 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 01:11:22 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/* is_sorted:
-	Comprueba si una pila está ordenada.
-	Devuelve 0 si la pila no está ordenada, 1 si lo está.
-*/
 
 int	is_sorted(t_stack *stack)
 {
@@ -28,10 +23,6 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-/* push_swap:
-	Elige un método de clasificación dependiendo del número
-	de valores a ordenar.
-*/
 static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 {
 	if (stack_size == 2 && !is_sorted(*stack_a))
@@ -42,12 +33,6 @@ static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 		sort(stack_a, stack_b);
 }
 
-/* main:
-	Comprueba si la entrada es correcta, en cuyo caso 
-	inicializa las pilas a y b,	asigna cada índice de valor y 
-	ordena las pilas. Cuando se realiza la clasificación, libera
-	las pilas y salidas.
-*/
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
