@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:45:48 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:39:51 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,17 @@ typedef struct s_stack
 
 // Operations 
 
-void		do_pa(t_stack **stack_a, t_stack **stack_b);
-void		do_pb(t_stack **stack_a, t_stack **stack_b);
-void		do_sa(t_stack **stack_a);
-void		do_sb(t_stack **stack_b);
-void		do_ss(t_stack **stack_a, t_stack **stack_b);
-void		do_ra(t_stack **stack_a);
-void		do_rb(t_stack **stack_b);
-void		do_rr(t_stack **stack_a, t_stack **stack_b);
-void		do_rrr(t_stack **stack_a, t_stack **stack_b);
-void		do_rra(t_stack **stack_a);
-void		do_rrb(t_stack **stack_b);
+void		pa(t_stack **stack_a, t_stack **stack_b);
+void		pb(t_stack **stack_a, t_stack **stack_b);
+void		sa(t_stack **stack_a);
+void		sb(t_stack **stack_b);
+void		ss(t_stack **stack_a, t_stack **stack_b);
+void		ra(t_stack **stack_a);
+void		rb(t_stack **stack_b);
+void		rr(t_stack **stack_a, t_stack **stack_b);
+void		rrr(t_stack **stack_a, t_stack **stack_b);
+void		rra(t_stack **stack_a);
+void		rrb(t_stack **stack_b);
 void		push(t_stack **src, t_stack **dest);
 void		swap(t_stack *stack);
 void		rotate(t_stack **stack);

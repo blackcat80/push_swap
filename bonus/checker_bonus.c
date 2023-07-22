@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 22:33:28 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:20:23 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:39:51 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,27 @@ void	ft_putstr(char *str)
 void	execute_commands(char *command, t_stack **stack_a, t_stack **stack_b)
 {
 	if (!ft_strcmp(command, "sa\n"))
-		do_sa(stack_a);
+		sa(stack_a);
 	else if (!ft_strcmp(command, "sb\n"))
-		do_sb(stack_b);
+		sb(stack_b);
 	else if (!ft_strcmp(command, "pa\n"))
-		do_pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
 	else if (!ft_strcmp(command, "pb\n"))
-		do_pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
 	else if (!ft_strcmp(command, "ra\n"))
-		do_ra(stack_a);
+		ra(stack_a);
 	else if (!ft_strcmp(command, "rb\n"))
-		do_rb(stack_b);
+		rb(stack_b);
 	else if (!ft_strcmp(command, "rra\n"))
-		do_rra(stack_a);
+		rra(stack_a);
 	else if (!ft_strcmp(command, "rrb\n"))
-		do_rrb(stack_b);
+		rrb(stack_b);
 	else if (!ft_strcmp(command, "rrr\n"))
-		do_rrr(stack_a, stack_b);
+		rrr(stack_a, stack_b);
 	else if (!ft_strcmp(command, "rr\n"))
-		do_rr(stack_a, stack_b);
+		rr(stack_a, stack_b);
 	else if (!ft_strcmp(command, "ss\n"))
-		do_ss(stack_a, stack_b);
+		ss(stack_a, stack_b);
 	else
 		ft_putstr("Error\n");
 }

@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:58 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:14:45 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:38:45 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ void	push(t_stack **src, t_stack **dest)
 	*src = tmp;
 }
 
-void	do_pa(t_stack **stack_a, t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_b, stack_a);
 }
 
-void	do_pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_a, stack_b);
 }

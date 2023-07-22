@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:11:22 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:37:49 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	is_sorted(t_stack *stack)
 static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 {
 	if (stack_size == 2 && !is_sorted(*stack_a))
-		do_sa(stack_a);
+		sa(stack_a);
 	else if (stack_size == 3)
 		tiny_sort(stack_a);
 	else if (stack_size > 3 && !is_sorted(*stack_a))

@@ -6,7 +6,7 @@
 #    By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 23:44:57 by csitja-b          #+#    #+#              #
-#    Updated: 2023/07/22 02:30:24 by csitja-b         ###   ########.fr        #
+#    Updated: 2023/07/22 03:46:35 by csitja-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRC         = main.c \
                 initialization.c \
                 stack.c \
                 swap.c push.c rotate.c reverse_rotate.c \
-                sort_tiny.c sort.c \
+                sort.c \
                 position.c cost.c do_move.c \
                 utils.c
 SRCS = $(addprefix $(SRC_DIR), $(SRC))

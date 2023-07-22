@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:44:13 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:09:19 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:39:42 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ static void	rotate(t_stack **stack)
 	tail->next = tmp;
 }
 
-void	do_ra(t_stack **stack_a)
+void	ra(t_stack **stack_a)
 {
 	rotate(stack_a);
 	ft_putstr("ra\n");
 }
 
-void	do_rb(t_stack **stack_b)
+void	rb(t_stack **stack_b)
 {
 	rotate(stack_b);
 	ft_putstr("rb\n");
 }
 
-void	do_rr(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);

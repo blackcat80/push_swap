@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:42:46 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:12:19 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 02:39:42 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void
 	{
 		(*cost_a)++;
 		(*cost_b)++;
-		do_rrr(a, b);
+		rrr(a, b);
 	}
 }
 
@@ -29,7 +29,7 @@ static void	do_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 	{
 		(*cost_a)--;
 		(*cost_b)--;
-		do_rr(a, b);
+		rr(a, b);
 	}
 }
 
@@ -39,12 +39,12 @@ static void	do_rotate_a(t_stack **a, int *cost)
 	{
 		if (*cost > 0)
 		{
-			do_ra(a);
+			ra(a);
 			(*cost)--;
 		}
 		else if (*cost < 0)
 		{
-			do_rra(a);
+			rra(a);
 			(*cost)++;
 		}
 	}
@@ -56,12 +56,12 @@ static void	do_rotate_b(t_stack **b, int *cost)
 	{
 		if (*cost > 0)
 		{
-			do_rb(b);
+			rb(b);
 			(*cost)--;
 		}
 		else if (*cost < 0)
 		{
-			do_rrb(b);
+			rrb(b);
 			(*cost)++;
 		}
 	}
@@ -75,5 +75,5 @@ void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b)
 		do_rotate_both(a, b, &cost_a, &cost_b);
 	do_rotate_a(a, &cost_a);
 	do_rotate_b(b, &cost_b);
-	do_pa(a, b);
+	pa(a, b);
 }

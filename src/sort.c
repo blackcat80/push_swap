@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:41:53 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/22 01:13:03 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/22 03:47:12 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,47 @@ static void	push_all_save_three(t_stack **stack_a, t_stack **stack_b)
 	{
 		if ((*stack_a)->index <= stack_size / 2)
 		{
-			do_pb(stack_a, stack_b);
+			pb(stack_a, stack_b);
 			pushed++;
 		}
 		else
-			do_ra(stack_a);
+			ra(stack_a);
 		i++;
 	}
 	while (stack_size - pushed > 3)
 	{
-		do_pb(stack_a, stack_b);
+		pb(stack_a, stack_b);
 		pushed++;
 	}
+}
+
+static int	find_highest_index(t_stack *stack)
+{
+	int		index;
+
+	index = stack->index;
+	while (stack)
+	{
+		if (stack->index > index)
+			index = stack->index;
+		stack = stack->next;
+	}
+	return (index);
+}
+
+void	tiny_sort(t_stack **stack)
+{
+	int		highest;
+
+	if (is_sorted(*stack))
+		return ;
+	highest = find_highest_index(*stack);
+	if ((*stack)->index == highest)
+		ra(stack);
+	else if ((*stack)->next->index == highest)
+		rra(stack);
+	if ((*stack)->index > (*stack)->next->index)
+		sa(stack);
 }
 
 static void	shift_stack(t_stack **stack_a)
@@ -50,7 +79,7 @@ static void	shift_stack(t_stack **stack_a)
 	{
 		while (lowest_pos < stack_size)
 		{
-			do_rra(stack_a);
+			rra(stack_a);
 			lowest_pos++;
 		}
 	}
@@ -58,7 +87,7 @@ static void	shift_stack(t_stack **stack_a)
 	{
 		while (lowest_pos > 0)
 		{
-			do_ra(stack_a);
+			ra(stack_a);
 			lowest_pos--;
 		}
 	}
