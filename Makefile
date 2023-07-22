@@ -6,7 +6,7 @@
 #    By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 23:44:57 by csitja-b          #+#    #+#              #
-#    Updated: 2023/07/22 07:13:20 by csitja-b         ###   ########.fr        #
+#    Updated: 2023/07/22 07:24:33 by csitja-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ INCLUDE         = -I ./includes/
 SRC_DIR         = src/
 BONUS_SRC_DIR   = bonus/
 OBJ_DIR         = obj/
+OBJ_BNS_DIR 	= objbns/
 
 # ============================= COMPILATE RULES =============================== #
 
@@ -67,7 +68,7 @@ WHITE       = \033[1;97m
 
 $(OBJ_DIR)%.o: %.c
 	@mkdir -p $(dir $@)
-	@printf "$(YELLOW)\r $@$(DEF_COLOR)"
+	@printf "$(YELLOW)\n $@$(DEF_COLOR)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 all: $(NAME)
